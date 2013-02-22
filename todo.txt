@@ -5,18 +5,12 @@ To do:
 * Input list of mundane weapon types (eh, maybe not)
 * Input list of spells for potions, scrolls, and wands (1/2 DONE)
  - Already input spells for wizard/sorceror, cleric, and druid. Check for other arcane and divine spells from other classes
-* Check "special qualities" for the following
- - Weapons
- - Rings
- - Rods
- - Staves
- - Wondrous items
 
 
 Project
 * Make generator for the following objects
-- Armor and shields
-- Weapons
+- Armor and shields (DONE!)
+- Weapons (DONE!)
 - Potions (DONE!)
 - Rings (DONE!)
 - Rods (DONE!)
@@ -24,5 +18,6 @@ Project
 - Staves (DONE!)
 - Wands (DONE!)
 - Wondrous items (DONE!)
-* Roll to make each item
-* Implement IRC bot part
+* Roll to make each item (DONE!)
+
+* Implement IRC bot part (later)

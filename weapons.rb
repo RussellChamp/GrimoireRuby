@@ -47,7 +47,7 @@ module Grimoire
 	def Grimoire.get_weapons_specific(num_minor = 0, num_medium = 0, num_major = 0)
 		ret_weapons_specific = []
 		num_minor.times{
-			case rand(1..100)
+			case rand(100)+1
 				when 1..15
 					ret_weapons_specific << @weapons_specific[0]
 				when 16..25
@@ -67,7 +67,7 @@ module Grimoire
 			end
 		}
 		num_medium.times{
-			case rand(1..100)
+			case rand(100)+1
 				when 1..9
 					ret_weapons_specific << @weapons_specific[4]
 				when 10..15
@@ -107,7 +107,7 @@ module Grimoire
 			end
 		}
 		num_major.times{
-			case rand(1..100)
+			case rand(100)+1
 				when 1..4
 					ret_weapons_specific << @weapons_specific[12]
 				when 5..7
@@ -196,7 +196,7 @@ module Grimoire
 	def Grimoire.get_humanoid_type()
 		#There is NO roll chart for picking humanoid types. I made up this roll. More common races have ~2x chance to roll
 		#I may just change this such that it is up to DM discression
-		case rand(1..100)
+		case rand(100)+1
 			when 1..6
 				return @humanoids[0]
 			when 7..19
@@ -226,7 +226,7 @@ module Grimoire
 
 	def Grimoire.get_outsider_type()
 		#There is NO roll chart for picking outsiders types. I made up this roll. Common enemy types have ~2x chance to roll
-		case rand(1..100)
+		case rand(100)+1
 			when 1..9
 				return @outsiders[0]
 			when 10..18
@@ -252,33 +252,33 @@ module Grimoire
 
 	def Grimoire.get_weapon_special_bane()
 		bane_name = "Bane of "
-		case rand(1..100)
-		when 1..5
-			bane_name += @weapon_bane[0]
-		when 6..9
-			bane_name += @weapon_bane[1]
-		when 10..16
-			bane_name += @weapon_bane[2]
-		when 17..22
-			bane_name += @weapon_bane[3]
-		when 23..27
-			bane_name += @weapon_bane[4]
-		when 28..60
-			bane_name += @weapon_bane[5] + " (" + get_humanoid_type() + ")"
-		when 61..65
-			bane_name += @weapon_bane[6]
-		when 66..70
-			bane_name += @weapon_bane[7]
-		when 71..72
-			bane_name += @weapon_bane[8]
-		when 73..88
-			bane_name += @weapon_bane[9] + " (" + get_outsider_type() + ")"
-		when 89..90
-			bane_name += @weapon_bane[10]
-		when 91..98
-			bane_name += @weapon_bane[11]
-		when 99..100
-			bane_name += @weapon_bane[12]
+		case rand(100)+1
+			when 1..5
+				bane_name += @weapon_bane[0]
+			when 6..9
+				bane_name += @weapon_bane[1]
+			when 10..16
+				bane_name += @weapon_bane[2]
+			when 17..22
+				bane_name += @weapon_bane[3]
+			when 23..27
+				bane_name += @weapon_bane[4]
+			when 28..60
+				bane_name += @weapon_bane[5] + " (" + get_humanoid_type() + ")"
+			when 61..65
+				bane_name += @weapon_bane[6]
+			when 66..70
+				bane_name += @weapon_bane[7]
+			when 71..72
+				bane_name += @weapon_bane[8]
+			when 73..88
+				bane_name += @weapon_bane[9] + " (" + get_outsider_type() + ")"
+			when 89..90
+				bane_name += @weapon_bane[10]
+			when 91..98
+				bane_name += @weapon_bane[11]
+			when 99..100
+				bane_name += @weapon_bane[12]
 		end
 		return [bane_name, 1]
 	end
@@ -288,7 +288,7 @@ module Grimoire
 	def Grimoire.get_weapon_melee_specials(quality)
 		case quality
 			when 'minor'
-				case rand(1..100)
+				case rand(100)+1
 					when 1..10
 						return get_weapon_special_bane()
 					when 11..17
@@ -323,7 +323,7 @@ module Grimoire
 						return [special1[0] + ' ' + special2[0], special1[1] + special2[1]]
 				end
 			when 'medium'
-				case rand(1..100)
+				case rand(100)+1
 					when 1..6
 						return get_weapon_special_bane
 					when 7..12
@@ -376,7 +376,7 @@ module Grimoire
 						return [special1[0] + ' ' + special2[0], special1[1] + special2[1]]
 				end
 			when 'major'
-				case rand(1..100)
+				case rand(100)+1
 					when 1..3
 						return get_weapon_special_bane
 					when 4..6
@@ -460,7 +460,7 @@ module Grimoire
 	def Grimoire.get_weapon_ranged_specials(quality)
 		case quality
 			when 'minor'
-				case rand(1..100)
+				case rand(100)+1
 					when 1..12
 						return get_weapon_special_bane()
 					when 13..25
@@ -485,7 +485,7 @@ module Grimoire
 						return [special1[0] + " " + special2[0], special1[1] + special2[1]]
 				end
 			when 'medium'
-				case rand(1..100)
+				case rand(100)+1
 					when 1..8
 						return get_weapon_special_bane
 					when 9..16
@@ -524,7 +524,7 @@ module Grimoire
 						return [special1[0] + " " + special2[0], special1[1] + special2[1]]
 				end
 			when 'major'
-				case rand(1..100)
+				case rand(100)+1
 					when 1..4
 						return get_weapon_special_bane
 					when 5..8
@@ -594,14 +594,14 @@ module Grimoire
 			weapon = []
 			if type.nil? or ! ['melee', 'ranged'].include? type.downcase #if type is nil or NOT one of 'melee' or 'ranged'
 			#There is no roll for melee vs ranged weapons so I made this up. There are different specials for melee/ranged so it's important
-				case rand(1..100)
+				case rand(100)+1
 					when 1..75 #75% melee
 						type = 'melee'
 					when 76..100 #25% ranged 
 						type = 'ranged'
 				end
 			end
-			case rand(1..100)
+			case rand(100)+1
 				when 1..70
 					weapon = [@weapons[0][0] + ' minor ' + type + ' weapon', @weapons[0][1], @weapons[0][2]]
 				when 71..85
@@ -629,7 +629,7 @@ module Grimoire
 					end #if it was a specific item, we'll just pass it on through
 			end #end case
 			if final
-				case rand(1..100)
+				case rand(100)+1
 					when 1..30
 						weapon[0] = 'Glowing ' + weapon[0]
 					when 31..45
@@ -643,14 +643,14 @@ module Grimoire
 		num_medium.times{
 			if type.nil? or ! ['melee', 'ranged'].include? type.downcase #if type is nil or NOT one of 'melee' or 'ranged'
 			#There is no roll for melee vs ranged weapons so I made this up. There are different specials for melee/ranged so it's important
-				case rand(1..100)
+				case rand(100)+1
 					when 1..75 #75% melee
 						type = 'melee'
 					when 76..100 #25% ranged 
 						type = 'ranged'
 				end
 			end
-			case rand(1..100)
+			case rand(100)+1
 				when 1..10
 					weapon = [@weapons[0][0] + ' medium ' + type + ' weapon', @weapons[0][1], @weapons[0][2]]
 				when 11..29
@@ -681,7 +681,7 @@ module Grimoire
 					end #if it was a specific item, we'll just pass it on through
 			end #end case
 			if final
-				case rand(1..100)
+				case rand(100)+1
 					when 1..30
 						weapon[0] = 'Glowing ' + weapon[0]
 					when 31..45
@@ -695,14 +695,14 @@ module Grimoire
 		num_major.times{
 			if type.nil? or ! ['melee', 'ranged'].include? type.downcase #if type is nil or NOT one of 'melee' or 'ranged'
 			#There is no roll for melee vs ranged weapons so I made this up. There are different specials for melee/ranged so it's important
-				case rand(1..100)
+				case rand(100)+1
 					when 1..75 #75% melee
 						type = 'melee'
 					when 76..100 #25% ranged 
 						type = 'ranged'
 				end
 			end
-			case rand(1..100)
+			case rand(100)+1
 				when 1..20
 					weapon = [@weapons[2][0] + ' major ' + type + ' weapon', @weapons[2][1], @weapons[2][2]]
 				when 21..38
@@ -731,7 +731,7 @@ module Grimoire
 					end #if it was a specific item, we'll just pass it on through
 			end #end case
 			if final
-				case rand(1..100)
+				case rand(100)+1
 					when 1..30
 						weapon[0] = 'Glowing ' + weapon[0]
 					when 31..45

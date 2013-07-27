@@ -61,7 +61,7 @@ module Grimoire
 		ret_rings = []
 		#TODO: clean up code so that when you return duplicate rings it is more obvious
 		num_minor.times{
-			case rand(1..100)
+			case rand(100)+1
 				when 1..18
 					ring = @rings[0]
 				when 19..28
@@ -93,7 +93,7 @@ module Grimoire
 				when 99..100
 					ring = @rings[17]
 			end
-			case rand(1..100)
+			case rand(100)+1
 				when 1
 					item_intelligence = get_item_intelligence(ring[1])
 					ret_rings << ['Intellegent ' + ring[0] + ' [' + item_intelligence[0] + ']', ring[1] + item_intelligence[1]]
@@ -104,7 +104,7 @@ module Grimoire
 			end
 		}
 		num_medium.times{
-			case rand(1..100)
+			case rand(100)+1
 				when 1..5
 					ring = @rings[6]
 				when 6..8
@@ -146,7 +146,7 @@ module Grimoire
 				when 98..100
 					ring = @rings[25]
 			end
-			case rand(1..100)
+			case rand(100)+1
 				when 1
 					item_intelligence = get_item_intelligence(ring[1])
 					ret_rings << ['Intellegent ' + ring[0] + ' [' + item_intelligence[0] + ']', ring[1] + item_intelligence[1]]
@@ -157,7 +157,7 @@ module Grimoire
 			end
 		}
 		num_major.times{
-			case rand(1..100)
+			case rand(100)+1
 				when 1..2
 					ring = @rings[15]
 				when 3..7
@@ -217,7 +217,7 @@ module Grimoire
 				when 100
 					ring = @rings[45]
 			end
-			case rand(1..100)
+			case rand(100)+1
 				when 1
 					item_intelligence = get_item_intelligence(ring[1])
 					ret_rings << ['Intellegent ' + ring[0] + ' [' + item_intelligence[0] + ']', ring[1] + item_intelligence[1]]

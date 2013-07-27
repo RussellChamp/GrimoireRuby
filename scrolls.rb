@@ -11,10 +11,10 @@ module Grimoire
 
 	def Grimoire.get_scroll(level, type = nil)
 		if type.nil?
-			case rand(1..2)
-				when 1
+			case rand(2)
+				when 0
 					type = 'arcane'
-				when 2
+				when 1
 					type = 'divine'
 			end
 		end
@@ -23,50 +23,50 @@ module Grimoire
 		when 'arcane'		
 			case level
 				when 0
-					return ['Scroll of ' + @spells_arcane_level_0[rand(0...@spells_arcane_level_0.count)] + ' (arcane, spell level 0, caster level 1)', @scrolls_cost[0]]
+					return ['Scroll of ' + @spells_arcane_level_0[rand(@spells_arcane_level_0.count)] + ' (arcane, spell level 0, caster level 1)', @scrolls_cost[0]]
 				when 1
-					return ['Scroll of ' + @spells_arcane_level_1[rand(0...@spells_arcane_level_1.count)] + ' (arcane, spell level 1, caster level 1)', @scrolls_cost[1]]
+					return ['Scroll of ' + @spells_arcane_level_1[rand(@spells_arcane_level_1.count)] + ' (arcane, spell level 1, caster level 1)', @scrolls_cost[1]]
 				when 2
-					return ['Scroll of ' + @spells_arcane_level_2[rand(0...@spells_arcane_level_2.count)] + ' (arcane, spell level 2, caster level 3)', @scrolls_cost[2]]
+					return ['Scroll of ' + @spells_arcane_level_2[rand(@spells_arcane_level_2.count)] + ' (arcane, spell level 2, caster level 3)', @scrolls_cost[2]]
 				when 3
-					return ['Scroll of ' + @spells_arcane_level_3[rand(0...@spells_arcane_level_3.count)] + ' (arcane, spell level 3, caster level 5)', @scrolls_cost[3]]
+					return ['Scroll of ' + @spells_arcane_level_3[rand(@spells_arcane_level_3.count)] + ' (arcane, spell level 3, caster level 5)', @scrolls_cost[3]]
 				when 4
-					return ['Scroll of ' + @spells_arcane_level_4[rand(0...@spells_arcane_level_4.count)] + ' (arcane, spell level 4, caster level 7)', @scrolls_cost[4]]
+					return ['Scroll of ' + @spells_arcane_level_4[rand(@spells_arcane_level_4.count)] + ' (arcane, spell level 4, caster level 7)', @scrolls_cost[4]]
 				when 5
-					return ['Scroll of ' + @spells_arcane_level_5[rand(0...@spells_arcane_level_5.count)] + ' (arcane, spell level 5, caster level 9)', @scrolls_cost[5]]
+					return ['Scroll of ' + @spells_arcane_level_5[rand(@spells_arcane_level_5.count)] + ' (arcane, spell level 5, caster level 9)', @scrolls_cost[5]]
 				when 6
-					return ['Scroll of ' + @spells_arcane_level_6[rand(0...@spells_arcane_level_6.count)] + ' (arcane, spell level 6, caster level 11)', @scrolls_cost[6]]
+					return ['Scroll of ' + @spells_arcane_level_6[rand(@spells_arcane_level_6.count)] + ' (arcane, spell level 6, caster level 11)', @scrolls_cost[6]]
 				when 7
-					return ['Scroll of ' + @spells_arcane_level_7[rand(0...@spells_arcane_level_7.count)] + ' (arcane, spell level 7, caster level 13)', @scrolls_cost[7]]
+					return ['Scroll of ' + @spells_arcane_level_7[rand(@spells_arcane_level_7.count)] + ' (arcane, spell level 7, caster level 13)', @scrolls_cost[7]]
 				when 8
-					return ['Scroll of ' + @spells_arcane_level_8[rand(0...@spells_arcane_level_8.count)] + ' (arcane, spell level 8, caster level 15)', @scrolls_cost[8]]
+					return ['Scroll of ' + @spells_arcane_level_8[rand(@spells_arcane_level_8.count)] + ' (arcane, spell level 8, caster level 15)', @scrolls_cost[8]]
 				when 9
-					return ['Scroll of ' + @spells_arcane_level_9[rand(0...@spells_arcane_level_9.count)] + ' (arcane, spell level 9, caster level 17)', @scrolls_cost[9]]
+					return ['Scroll of ' + @spells_arcane_level_9[rand(@spells_arcane_level_9.count)] + ' (arcane, spell level 9, caster level 17)', @scrolls_cost[9]]
 				else
 					return ['invalid scroll level', 0]
 			end
 		when 'divine'
 			case level
 				when 0
-					return ['Scroll of ' + @spells_divine_level_0[rand(0...@spells_divine_level_0.count)] + ' (divine, spell level 0, caster level 1)', @scrolls_cost[0]]
+					return ['Scroll of ' + @spells_divine_level_0[rand(@spells_divine_level_0.count)] + ' (divine, spell level 0, caster level 1)', @scrolls_cost[0]]
 				when 1
-					return ['Scroll of ' + @spells_divine_level_1[rand(0...@spells_divine_level_1.count)] + ' (divine, spell level 1, caster level 1)', @scrolls_cost[1]]
+					return ['Scroll of ' + @spells_divine_level_1[rand(@spells_divine_level_1.count)] + ' (divine, spell level 1, caster level 1)', @scrolls_cost[1]]
 				when 2
-					return ['Scroll of ' + @spells_divine_level_2[rand(0...@spells_divine_level_2.count)] + ' (divine, spell level 2, caster level 3)', @scrolls_cost[2]]
+					return ['Scroll of ' + @spells_divine_level_2[rand(@spells_divine_level_2.count)] + ' (divine, spell level 2, caster level 3)', @scrolls_cost[2]]
 				when 3
-					return ['Scroll of ' + @spells_divine_level_3[rand(0...@spells_divine_level_3.count)] + ' (divine, spell level 3, caster level 5)', @scrolls_cost[3]]
+					return ['Scroll of ' + @spells_divine_level_3[rand(@spells_divine_level_3.count)] + ' (divine, spell level 3, caster level 5)', @scrolls_cost[3]]
 				when 4
-					return ['Scroll of ' + @spells_divine_level_4[rand(0...@spells_divine_level_4.count)] + ' (divine, spell level 4, caster level 7)', @scrolls_cost[4]]
+					return ['Scroll of ' + @spells_divine_level_4[rand(@spells_divine_level_4.count)] + ' (divine, spell level 4, caster level 7)', @scrolls_cost[4]]
 				when 5
-					return ['Scroll of ' + @spells_divine_level_5[rand(0...@spells_divine_level_5.count)] + ' (divine, spell level 5, caster level 9)', @scrolls_cost[5]]
+					return ['Scroll of ' + @spells_divine_level_5[rand(@spells_divine_level_5.count)] + ' (divine, spell level 5, caster level 9)', @scrolls_cost[5]]
 				when 6
-					return ['Scroll of ' + @spells_divine_level_6[rand(0...@spells_divine_level_6.count)] + ' (divine, spell level 6, caster level 11)', @scrolls_cost[6]]
+					return ['Scroll of ' + @spells_divine_level_6[rand(@spells_divine_level_6.count)] + ' (divine, spell level 6, caster level 11)', @scrolls_cost[6]]
 				when 7
-					return ['Scroll of ' + @spells_divine_level_7[rand(0...@spells_divine_level_7.count)] + ' (divine, spell level 7, caster level 13)', @scrolls_cost[7]]
+					return ['Scroll of ' + @spells_divine_level_7[rand(@spells_divine_level_7.count)] + ' (divine, spell level 7, caster level 13)', @scrolls_cost[7]]
 				when 8
-					return ['Scroll of ' + @spells_divine_level_8[rand(0...@spells_divine_level_8.count)] + ' (divine, spell level 8, caster level 15)', @scrolls_cost[8]]
+					return ['Scroll of ' + @spells_divine_level_8[rand(@spells_divine_level_8.count)] + ' (divine, spell level 8, caster level 15)', @scrolls_cost[8]]
 				when 9
-					return ['Scroll of ' + @spells_divine_level_9[rand(0...@spells_divine_level_9.count)] + ' (divine, spell level 9, caster level 17)', @scrolls_cost[9]]
+					return ['Scroll of ' + @spells_divine_level_9[rand(@spells_divine_level_9.count)] + ' (divine, spell level 9, caster level 17)', @scrolls_cost[9]]
 				else
 					return ['invalid scroll level', 0]
 			end
@@ -79,7 +79,7 @@ module Grimoire
 		#TODO: finish scrolls
 		ret_scrolls = []
 		num_minor.times{
-			case rand(1..100)
+			case rand(100)+1
 				when 1..5
 					ret_scrolls << get_scroll(0)
 				when 6..50
@@ -91,7 +91,7 @@ module Grimoire
 			end
 		}
 		num_medium.times{
-			case rand(1..100)
+			case rand(100)+1
 				when 1..5
 					ret_scrolls << get_scroll(2)
 				when 6..65
@@ -103,7 +103,7 @@ module Grimoire
 			end
 		}
 		num_major.times{
-			case rand(1..100)
+			case rand(100)+1
 				when 1..5
 					ret_scrolls << get_scroll(4)
 				when 6..50

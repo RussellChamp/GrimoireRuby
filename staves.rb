@@ -39,7 +39,7 @@ module Grimoire
 			puts "There are no minor staves"
 		end
 		num_medium.times{
-			case rand(1..100)
+			case rand(100)+1
 			when 1..15
 				staff = @staves[0]
 			when 16..30
@@ -57,7 +57,7 @@ module Grimoire
 			when 96..100
 				staff = @staves[7]
 			end
-			case rand(1..100)
+			case rand(100)+1
 				when 1..30
 					ret_staves << [staff[0] + ' (with a clue as to its purpose)', staff[1]]
 				else
@@ -65,7 +65,7 @@ module Grimoire
 			end
 		}
 		num_major.times{
-			case rand(1..100)
+			case rand(100)+1
 			when 1..3
 				staff = @staves[0]
 			when 4..9
@@ -109,7 +109,7 @@ module Grimoire
 			when 99..100
 				staff = @staves[20]
 			end
-			case rand(1..100)
+			case rand(100)+1
 				when 1..30
 					ret_staves << [staff[0] + ' (with a clue as to its purpose)', staff[1]]
 				else

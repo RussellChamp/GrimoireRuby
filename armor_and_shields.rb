@@ -24,7 +24,7 @@ module Grimoire
 	def Grimoire.get_armors_specific(num_minor = 0, num_medium = 0, num_major = 0)
 		ret_armors = []
 		num_minor.times{
-			case rand(1..100)
+			case rand(100) + 1
 				when 1..50
 					ret_armors << @armors_specific[0]
 				when 51..80
@@ -34,7 +34,7 @@ module Grimoire
 			end
 		}
 		num_medium.times{
-			case rand(1..100)
+			case rand(100) + 1
 				when 1..25
 					ret_armors << @armors_specific[0]
 				when 26..45
@@ -52,7 +52,7 @@ module Grimoire
 			end
 		}
 		num_major.times{
-			case rand(1..100)
+			case rand(100) + 1
 				when 1..10
 					ret_armors << @armors_specific[4]
 				when 11..20
@@ -89,7 +89,7 @@ module Grimoire
 	def Grimoire.get_shields_specific(num_minor = 0, num_medium = 0, num_major = 0)
 		ret_shields = []
 		num_minor.times{
-			case rand(1..100)
+			case rand(100) + 1
 				when 1..30
 					ret_shields << @shields_specific[0]
 				when 31..80
@@ -101,7 +101,7 @@ module Grimoire
 			end
 		}
 		num_medium.times{
-			case rand(1..100)
+			case rand(100) + 1
 				when 1..20
 					ret_shields << @shields_specific[0]
 				when 21..45
@@ -119,7 +119,7 @@ module Grimoire
 			end
 		}
 		num_major.times{
-			case rand(1..100)
+			case rand(100) + 1
 				when 1..20
 					ret_shields << @shields_specific[3]
 				when 21..40
@@ -190,7 +190,7 @@ module Grimoire
 	def Grimoire.get_armor_special(quality)
 		case quality
 			when 'minor'
-				case rand(1..100)
+				case rand(100) + 1
 					when 1..25
 						return @armor_specials[0]
 					when 26..32
@@ -211,7 +211,7 @@ module Grimoire
 						return [special1[0] + ' ' + special2[0], special1[1] + special2[1], special1[2] + special2[2]]
 				end
 			when 'medium'
-				case rand(1..100)
+				case rand(100) + 1
 					when 1..5
 						return @armor_specials[0]
 					when 6..8
@@ -244,7 +244,7 @@ module Grimoire
 						return [special1[0] + ' ' + special2[0], special1[1] + special2[1], special1[2] + special2[2]]
 				end
 			when 'major'
-				case rand(1..100)
+				case rand(100) + 1
 					when 1..3
 						return @armor_specials[0]
 					when 4
@@ -319,7 +319,7 @@ module Grimoire
 	def Grimoire.get_shield_special(quality)
 		case quality
 			when 'minor'
-				case rand(1..100)
+				case rand(100) + 1
 					when 1..20
 						return @shield_specials[0]
 					when 21..40
@@ -340,7 +340,7 @@ module Grimoire
 						return [special1[0] + ' ' + special2[0], special1[1] + special2[1], special1[2] + special2[2]]
 				end
 			when 'medium'
-				case rand(1..100)
+				case rand(100) + 1
 					when 1..10
 						return @shield_specials[0]
 					when 11..20
@@ -371,7 +371,7 @@ module Grimoire
 						return [special1[0] + ' ' + special2[0], special1[1] + special2[1], special1[2] + special2[2]]
 				end
 			when 'major'
-				case rand(1..100)
+				case rand(100) + 1
 					when 1..5
 						return @shield_specials[0]
 					when 6..8
@@ -422,7 +422,7 @@ module Grimoire
 	def Grimoire.get_armor_and_shields(num_minor = 0, num_medium = 0, num_major = 0, final = true)
 		ret_armor_and_shields = []
 		num_minor.times{
-			case rand(1..100)
+			case rand(100) + 1
 				when 1..60
 					armor_or_shield = @shields[0]
 				when 61..80
@@ -470,7 +470,7 @@ module Grimoire
 			end
 		}
 		num_medium.times{
-			case rand(1..100)
+			case rand(100) + 1
 				when 1..5
 					armor_or_shield = @shields[0]
 				when 6..10
@@ -524,7 +524,7 @@ module Grimoire
 			end
 		}
 		num_major.times{
-			case rand(1..100)
+			case rand(100) + 1
 				when 1..8
 					armor_or_shield = @shields[2]
 				when 9..16

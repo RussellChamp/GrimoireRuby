@@ -140,111 +140,111 @@ module Grimoire
 			when 'a','A','arcane','Arcane'
 				case level
 					when 0
-						return @spells_arcane_level_0[rand(0...@spells_arcane_level_0.count)]
+						return @spells_arcane_level_0[rand(@spells_arcane_level_0.count)]
 					when 1
-						return @spells_arcane_level_1[rand(0...@spells_arcane_level_1.count)]
+						return @spells_arcane_level_1[rand(@spells_arcane_level_1.count)]
 					when 2
-						return @spells_arcane_level_2[rand(0...@spells_arcane_level_2.count)]
+						return @spells_arcane_level_2[rand(@spells_arcane_level_2.count)]
 					when 3
-						return @spells_arcane_level_3[rand(0...@spells_arcane_level_3.count)]
+						return @spells_arcane_level_3[rand(@spells_arcane_level_3.count)]
 					when 4
-						return @spells_arcane_level_4[rand(0...@spells_arcane_level_4.count)]
+						return @spells_arcane_level_4[rand(@spells_arcane_level_4.count)]
 					when 5
-						return @spells_arcane_level_5[rand(0...@spells_arcane_level_5.count)]
+						return @spells_arcane_level_5[rand(@spells_arcane_level_5.count)]
 					when 6
-						return @spells_arcane_level_6[rand(0...@spells_arcane_level_6.count)]
+						return @spells_arcane_level_6[rand(@spells_arcane_level_6.count)]
 					when 7
-						return @spells_arcane_level_7[rand(0...@spells_arcane_level_7.count)]
+						return @spells_arcane_level_7[rand(@spells_arcane_level_7.count)]
 					when 8
-						return @spells_arcane_level_8[rand(0...@spells_arcane_level_8.count)]
+						return @spells_arcane_level_8[rand(@spells_arcane_level_8.count)]
 					when 9
-						return @spells_arcane_level_9[rand(0...@spells_arcane_level_9.count)]
+						return @spells_arcane_level_9[rand(@spells_arcane_level_9.count)]
 					else
 						return 'invalid spell level'
 				end
 			when 'd','D','divine','Divine'
 				case level
 					when 0
-						return @spells_divine_level_0[rand(0...@spells_divine_level_0.count)]
+						return @spells_divine_level_0[rand(@spells_divine_level_0.count)]
 					when 1
-						return @spells_divine_level_1[rand(0...@spells_divine_level_1.count)]
+						return @spells_divine_level_1[rand(@spells_divine_level_1.count)]
 					when 2
-						return @spells_divine_level_2[rand(0...@spells_divine_level_2.count)]
+						return @spells_divine_level_2[rand(@spells_divine_level_2.count)]
 					when 3
-						return @spells_divine_level_3[rand(0...@spells_divine_level_3.count)]
+						return @spells_divine_level_3[rand(@spells_divine_level_3.count)]
 					when 4
-						return @spells_divine_level_4[rand(0...@spells_divine_level_4.count)]
+						return @spells_divine_level_4[rand(@spells_divine_level_4.count)]
 					when 5
-						return @spells_divine_level_5[rand(0...@spells_divine_level_5.count)]
+						return @spells_divine_level_5[rand(@spells_divine_level_5.count)]
 					when 6
-						return @spells_divine_level_6[rand(0...@spells_divine_level_6.count)]
+						return @spells_divine_level_6[rand(@spells_divine_level_6.count)]
 					when 7
-						return @spells_divine_level_7[rand(0...@spells_divine_level_7.count)]
+						return @spells_divine_level_7[rand(@spells_divine_level_7.count)]
 					when 8
-						return @spells_divine_level_8[rand(0...@spells_divine_level_8.count)]
+						return @spells_divine_level_8[rand(@spells_divine_level_8.count)]
 					when 9
-						return @spells_divine_level_9[rand(0...@spells_divine_level_9.count)]
+						return @spells_divine_level_9[rand(@spells_divine_level_9.count)]
 					else
 						return 'invalid spell level'
 				end
 			when 'any','Any'
 				case level
 					when 0
-						if rand(1..@spells_arcane_level_0.count+@spells_divine_level_0.count) <= @spells_arcane_level_0.count
+						if rand(@spells_arcane_level_0.count+@spells_divine_level_0.count)+1 <= @spells_arcane_level_0.count
 							return get_spell(0, 'arcane')
 						else
 							return get_spell(0, 'divine')
 						end
 					when 1
-						if rand(1..@spells_arcane_level_1.count+@spells_divine_level_1.count) <= @spells_arcane_level_1.count
+						if rand(@spells_arcane_level_1.count+@spells_divine_level_1.count)+1 <= @spells_arcane_level_1.count
 							return get_spell(1, 'arcane')
 						else
 							return get_spell(1, 'divine')
 						end
 					when 2
-						if rand(1..@spells_arcane_level_2.count+@spells_divine_level_2.count) <= @spells_arcane_level_2.count
+						if rand(@spells_arcane_level_2.count+@spells_divine_level_2.count)+1 <= @spells_arcane_level_2.count
 							return get_spell(2, 'arcane')
 						else
 							return get_spell(2, 'divine')
 						end
 					when 3
-						if rand(1..@spells_arcane_level_3.count+@spells_divine_level_3.count) <= @spells_arcane_level_3.count
+						if rand(@spells_arcane_level_3.count+@spells_divine_level_3.count)+1 <= @spells_arcane_level_3.count
 							return get_spell(3, 'arcane')
 						else
 							return get_spell(3, 'divine')
 						end
 					when 4
-						if rand(1..@spells_arcane_level_4.count+@spells_divine_level_4.count) <= @spells_arcane_level_4.count
+						if rand(@spells_arcane_level_4.count+@spells_divine_level_4.count)+1 <= @spells_arcane_level_4.count
 							return get_spell(4, 'arcane')
 						else
 							return get_spell(4, 'divine')
 						end
 					when 5
-						if rand(1..@spells_arcane_level_5.count+@spells_divine_level_5.count) <= @spells_arcane_level_5.count
+						if rand(@spells_arcane_level_5.count+@spells_divine_level_5.count)+1 <= @spells_arcane_level_5.count
 							return get_spell(5, 'arcane')
 						else
 							return get_spell(5, 'divine')
 						end
 					when 6
-						if rand(1..@spells_arcane_level_6.count+@spells_divine_level_6.count) <= @spells_arcane_level_6.count
+						if rand(@spells_arcane_level_6.count+@spells_divine_level_6.count)+1 <= @spells_arcane_level_6.count
 							return get_spell(6, 'arcane')
 						else
 							return get_spell(6, 'divine')
 						end
 					when 7
-						if rand(1..@spells_arcane_level_7.count+@spells_divine_level_7.count) <= @spells_arcane_level_7.count
+						if rand(@spells_arcane_level_7.count+@spells_divine_level_7.count)+1 <= @spells_arcane_level_7.count
 							return get_spell(7, 'arcane')
 						else
 							return get_spell(7, 'divine')
 						end
 					when 8
-						if rand(1..@spells_arcane_level_8.count+@spells_divine_level_8.count) <= @spells_arcane_level_8.count
+						if rand(@spells_arcane_level_8.count+@spells_divine_level_8.count)+1 <= @spells_arcane_level_8.count
 							return get_spell(8, 'arcane')
 						else
 							return get_spell(8, 'divine')
 						end
 					when 9
-						if rand(1..@spells_arcane_level_9.count+@spells_divine_level_9.count) <= @spells_arcane_level_9.count
+						if rand(@spells_arcane_level_9.count+@spells_divine_level_9.count)+1 <= @spells_arcane_level_9.count
 							return get_spell(9, 'arcane')
 						else
 							return get_spell(9, 'divine')

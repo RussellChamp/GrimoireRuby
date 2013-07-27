@@ -13,7 +13,7 @@ module Grimoire
 					'Lawful good', 'Lawful neutral', 'Neutral good', 'True neutral'] #9 alignments
 
 	def Grimoire.get_alignment()
-		case rand(1..100)
+		case rand(100) + 1
 			when 1..10
 				return @alignments[0]
 			when 11..20
@@ -52,7 +52,7 @@ module Grimoire
 
 	def Grimoire.get_ability_score()
 		#there was no intellignent item ability scores roll table so I made up my own. It favors 12 and 14 with lower probabilities for higher numbers
-		case rand(1..100)
+		case rand(100) + 1
 			when 1..10
 				return @ability_scores[0]
 			when 11..20
@@ -91,7 +91,7 @@ module Grimoire
 
 	def Grimoire.get_skill(type = nil)
 		if type.nil?
-			case rand(1..@skills_int.count+@skills_cha.count+@skills_wis.count) #get a random number between 1 and the total skills
+			case rand(@skills_int.count+@skills_cha.count+@skills_wis.count) + 1 #get a random number between 1 and the total skills
 				when 1..@skills_int.count
 					type = 'int'
 				when @skills_int.count+1..@skills_int.count+@skills_cha.count
@@ -102,11 +102,11 @@ module Grimoire
 		end
 		case type
 			when 'int','Int','intelligence','Intelligence'
-				return @skills_int[rand(0...@skills_int.count)]
+				return @skills_int[rand(@skills_int.count)]
 			when 'cha','Cha','charisma','Charisma'
-				return @skills_cha[rand(0...@skills_cha.count)]
+				return @skills_cha[rand(@skills_cha.count)]
 			when 'wis','Wis','wisdom','Wisdom'
-				return @skills_wis[rand(0...@skills_wis.count)]
+				return @skills_wis[rand(@skills_wis.count)]
 			else
 				return 'Invalid skill type'
 		end
@@ -115,7 +115,7 @@ module Grimoire
 	#I've tried to keep things orderly in public arrays but this items powers are a bit messy
 	#item_power = [discription, base price modifier, ego modifier]
 	def Grimoire.get_item_power()
-		case rand(1..100)
+		case rand(100) + 1
 			when 1..10
 				return ['Item can cast ' + get_spell(0) + ' at will', 1000, 1]
 			when 11..20
@@ -152,7 +152,7 @@ module Grimoire
 	#this one was also a bit messy
 	#item_purpose = [discription, ego modifier]
 	def Grimoire.get_item_purpose()
-		case rand(1..100)
+		case rand(100) + 1
 			when 1..20
 				return ['Defeat/slay diametrically opposed alignment', 2]
 			when 21..30
@@ -181,7 +181,7 @@ module Grimoire
 	#another messy one
 	#dedicated_power = [discription, base price modifier, ego modifier]
 	def Grimoire.get_dedicated_power()
-		case rand(1..100)
+		case rand(100) + 1
 			when 1..20
 				return ['Item can detect any special purpose foes within 60 feet', 10000, 1]
 			when 21..35
@@ -266,7 +266,7 @@ module Grimoire
 
 		senses_and_communication = ' Senses and communication: '
 
-		case rand(1..100) #get communication ability for the item. there was no roll table so I made this up
+		case rand(100) + 1 #get communication ability for the item. there was no roll table so I made this up
 			when 1..30
 				communication, cost_bonus, ego_bonus = @communication[0]
 			when 31..70
@@ -278,7 +278,7 @@ module Grimoire
 		cost += cost_bonus
 		ego += ego_bonus
 
-		case rand(1..100) #get senses for the item. there was no roll table so I made this up
+		case rand(100) + 1 #get senses for the item. there was no roll table so I made this up
 			when 1..50
 				senses, cost_bonus, ego_bonus = @senses_basic[0]
 			when 51..80
@@ -290,7 +290,7 @@ module Grimoire
 		cost += cost_bonus
 		ego += ego_bonus
 
-		case rand(1..100) #get special senses for the item. there was no roll table so I made this up and limited it to only 1 special per item
+		case rand(100) + 1 #get special senses for the item. there was no roll table so I made this up and limited it to only 1 special per item
 			when 1..50
 				senses, cost_bonus, ego_bonus = ['', 0, 0]
 			when 51..70
@@ -318,7 +318,7 @@ module Grimoire
 		powers = ' Powers: '
 
 		first = true
-		rand(1..5).times{
+		(rand(5)+1).times{
 			power, cost_bonus, ego_bonus = get_item_power()
 			if first #to make sure the grammars are right
 				powers += power
@@ -340,13 +340,13 @@ module Grimoire
 		#there was NO roll chart for determining if an item has a purpose so I made this up
 		#I figure 20% of the time sounds good
 		purpose = ''
-		if rand(1..100) > 80
+		if rand(100)+1 > 80
 			purpose_desc, ego_bonus = get_item_purpose()
 			purpose += ' Purpose: ' + purpose_desc
 			ego += ego_bonus
 
 			#decided that purposed items get between 1-3 dedicated powers, heavily leaning on 1
-			case rand(1..100)
+			case rand(100)+1
 				when 1..70
 					purpose_powers_num = 1
 				when 71..90

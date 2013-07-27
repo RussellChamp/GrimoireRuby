@@ -322,8 +322,8 @@ module Grimoire
 		ret_items = []
 		#TODO: clean up code so that when you return duplicate items it is more obvious
 		num_minor.times{
-			item = @wondrous_items_minor[rand(0...@wondrous_items_minor.count)]
-			case rand(1..100)
+			item = @wondrous_items_minor[rand(@wondrous_items_minor.count)]
+			case rand(100)+1
 				when 1
 					item_intelligence = get_item_intelligence(item[1])
 					ret_items << ['Intellegent ' + item[0] + ' [' + item_intelligence[0] + ']', item[1] + item_intelligence[1]]
@@ -334,8 +334,8 @@ module Grimoire
 			end
 		}
 		num_medium.times{
-			item = @wondrous_items_medium[rand(0...@wondrous_items_medium.count)]
-			case rand(1..100)
+			item = @wondrous_items_medium[rand(@wondrous_items_medium.count)]
+			case rand(100)+1
 				when 1
 					item_intelligence = get_item_intelligence(item[1])
 					ret_items << ['Intellegent ' + item[0] + ' [' + item_intelligence[0] + ']', item[1] + item_intelligence[1]]
@@ -346,8 +346,8 @@ module Grimoire
 			end
 		}
 		num_major.times{
-			item = @wondrous_items_major[rand(0...@wondrous_items_major.count)]
-			case rand(1..100)
+			item = @wondrous_items_major[rand(@wondrous_items_major.count)]
+			case rand(100)+1
 				when 1
 					item_intelligence = get_item_intelligence(item[1])
 					ret_items << ['Intellegent ' + item[0] + ' [' + item_intelligence[0] + ']', item[1] + item_intelligence[1]]

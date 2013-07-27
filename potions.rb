@@ -31,13 +31,13 @@ module Grimoire
 	def Grimoire.get_potion(level)
 		case level
 			when 0
-				return ['Potion/Oil of ' + @potions_level_0[rand(0...@potions_level_0.count)] + ' (spell level 0, caster level 1)', @potion_level_0_cost]
+				return ['Potion/Oil of ' + @potions_level_0[rand(@potions_level_0.count)] + ' (spell level 0, caster level 1)', @potion_level_0_cost]
 			when 1
-				return ['Potion/Oil of ' + @potions_level_1[rand(0...@potions_level_1.count)] + ' (spell level 1, caster level 1)', @potion_level_1_cost]
+				return ['Potion/Oil of ' + @potions_level_1[rand(@potions_level_1.count)] + ' (spell level 1, caster level 1)', @potion_level_1_cost]
 			when 2
-				return ['Potion/Oil of ' + @potions_level_2[rand(0...@potions_level_2.count)] + ' (spell level 2, caster level 3)', @potion_level_2_cost]
+				return ['Potion/Oil of ' + @potions_level_2[rand(@potions_level_2.count)] + ' (spell level 2, caster level 3)', @potion_level_2_cost]
 			when 3
-				return ['Potion/Oil of ' + @potions_level_3[rand(0...@potions_level_3.count)] + ' (spell level 3, caster level 5)', @potion_level_3_cost]
+				return ['Potion/Oil of ' + @potions_level_3[rand(@potions_level_3.count)] + ' (spell level 3, caster level 5)', @potion_level_3_cost]
 			else
 				return ['invalid potion level', 0]
 		end
@@ -46,7 +46,7 @@ module Grimoire
 	def Grimoire.get_potions(num_minor = 0, num_medium = 0, num_major = 0)
 		ret_potions = []
 		num_minor.times{
-			case rand(1..100)
+			case rand(100)+1
 				when 1..20
 					ret_potions << get_potion(0)
 				when 21..60
@@ -56,7 +56,7 @@ module Grimoire
 			end
 		}
 		num_medium.times{
-			case rand(1..100)
+			case rand(100)+1
 				when 1..20
 					ret_potions << get_potion(1)
 				when 21..60
@@ -66,7 +66,7 @@ module Grimoire
 			end
 		}
 		num_major.times{
-			case rand(1..100)
+			case rand(100)+1
 				when 1..20
 					ret_potions << get_potion(2)
 				when 21..100

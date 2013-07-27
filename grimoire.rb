@@ -28,7 +28,7 @@ module Grimoire
 	def Grimoire.get_items(num_minor = 0, num_medium = 0, num_major = 0, total_value = 0)
 		items = []
 		num_minor.times{
-			case rand(1..100)
+			case rand(100) + 1
 			when 1..4
 				items += get_armor_and_shields(1)
 			when 5..9
@@ -46,7 +46,7 @@ module Grimoire
 			end
 		}
 		num_medium.times{
-			case rand(1..100)
+			case rand(100) + 1
 			when 1..10
 				items += get_armor_and_shields(0,1)
 			when 11..20
@@ -68,7 +68,7 @@ module Grimoire
 			end
 		}
 		num_major.times{
-			case rand(1..100)
+			case rand(100) + 1
 			when 1..10
 				items += get_armor_and_shields(0,0,1)
 			when 11..20

@@ -54,7 +54,7 @@ module Grimoire
 		ret_rods = []
 		#TODO: clean up code so that when you return duplicate rods it is more obvious
 		num_medium.times{
-			case rand(1..100)
+			case rand(100)+1
 				when 1..7
 					rod = @rods[0]
 				when 8..14
@@ -90,7 +90,7 @@ module Grimoire
 				when 100
 					rod = @rods[23]
 			end
-			case rand(1..100)
+			case rand(100)+1
 				when 1
 					item_intelligence = get_item_intelligence(rod[1])
 					ret_rods << ['Intellegent ' + rod[0] + ' [' + item_intelligence[0] + ']', rod[1] + item_intelligence[1]]
@@ -101,7 +101,7 @@ module Grimoire
 			end
 		}
 		num_major.times{
-			case rand(1..100)
+			case rand(100)+1
 				when 1..4
 					rod = @rods[6]
 				when 5..6
@@ -161,7 +161,7 @@ module Grimoire
 				when 100
 					rod = @rods[35]
 			end
-			case rand(1..100)
+			case rand(100)+1
 				when 1
 					item_intelligence = get_item_intelligence(rod[1])
 					ret_rods << ['Intellegent ' + rod[0] + ' [' + item_intelligence[0] + ']', rod[1] + item_intelligence[1]]

@@ -16,10 +16,10 @@ module Grimoire
 		'Ventriloquism', 'Cause Fear', 'Chill Touch', 'Ray of Enfeeblement', 'Animate Rope', 'Enlarge Person', 'Erase', 'Expeditious Retreat', 
 		'Feather Fall', 'Jump', 'Magic Weapon', 'Reduce Person']
 
-	@spells_arcane_level_2 = ['Arcane LockM', 'Obscure Object', 'Protection from Arrows', 'Resist Energy', 'Acid Arrow', 'Fog Cloud', 'Glitterdust', 
+	@spells_arcane_level_2 = ['Arcane Lock', 'Obscure Object', 'Protection from Arrows', 'Resist Energy', 'Acid Arrow', 'Fog Cloud', 'Glitterdust', 
 		'Summon Monster II', 'Summon Swarm', 'Web', 'Detect Thoughts', 'Locate Object', 'See Invisibility', 'Daze Monster', 'Hideous Laughter', 
-		'Touch of Idiocy', 'Continual FlameM', 'Darkness', 'Flaming Sphere', 'Gust of Wind', 'Scorching Ray', 'Shatter', 'Blur', 'Hypnotic Pattern', 
-		'Invisibility', 'Magic Mouth', 'Minor Image', 'Mirror Image', 'Misdirection', 'Phantom TrapM', 'Blindness/Deafness', 'Command Undead', 
+		'Touch of Idiocy', 'Continual Flame', 'Darkness', 'Flaming Sphere', 'Gust of Wind', 'Scorching Ray', 'Shatter', 'Blur', 'Hypnotic Pattern', 
+		'Invisibility', 'Magic Mouth', 'Minor Image', 'Mirror Image', 'Misdirection', 'Phantom Trap', 'Blindness/Deafness', 'Command Undead', 
 		'False Life', 'Ghoul Touch', 'Scare', 'Spectral Hand', 'Alter Self', 'Bear\'s Endurance', 'Bull\'s Strength', 'Cat\'s Grace', 'Darkvision',
 		'Eagle\'s Splendor', 'Fox\'s Cunning', 'Knock', 'Levitate', 'Make Whole', 'Owl\'s Wisdom', 'Pyrotechnics', 'Rope Trick', 'Spider Climb', 
 		'Whispering Wind']
@@ -40,29 +40,29 @@ module Grimoire
 
 	@spells_arcane_level_5 = ['Break Enchantment', 'Dismissal', 'Mage\'s Private Sanctum', 'Cloudkill', 'Mage\'s Faithful Hound', 'Major Creation', 
 		'Planar Binding, Lesser', 'Secret Chest', 'Summon Monster V', 'Teleport', 'Wall of Stone', 'Contact Other Plane', 'Prying Eyes', 
-		'Telepathic Bond', 'Dominate Person', 'Feeblemind', 'Hold Monster', 'Mind Fog', 'Symbol of SleepM', 'Cone of Cold', 'Interposing Hand', 
+		'Telepathic Bond', 'Dominate Person', 'Feeblemind', 'Hold Monster', 'Mind Fog', 'Symbol of Sleep', 'Cone of Cold', 'Interposing Hand', 
 		'Sending', 'Wall of Force', 'Dream', 'False Vision', 'Mirage Arcana', 'Nightmare', 'Persistent Image', 'Seeming', 'Shadow Evocation', 
 		'Blight', 'Magic Jar', 'Symbol of Pain', 'Waves of Fatigue', 'Animal Growth', 'Baleful Polymorph', 'Beast Shape III', 'Elemental Body II', 
 		'Fabricate', 'Overland Flight', 'Passwall', 'Plant Shape I', 'Polymorph', 'Telekinesis', 'Transmute Mud to Rock', 'Transmute Rock to Mud', 
 		'Permanency']
 
 	@spells_arcane_level_6 = ['Antimagic Field', 'Dispel Magic, Greater', 'Globe of Invulnerability', 'Guards and Wards', 'Repulsion', 'Acid Fog', 
-		'Planar Binding', 'Summon Monster VI', 'Wall of Iron', 'Analyze Dweomer', 'Legend LoreMF', 'True Seeing', 'Geas/Quest', 'Heroism, Greater', 
+		'Planar Binding', 'Summon Monster VI', 'Wall of Iron', 'Analyze Dweomer', 'Legend Lore', 'True Seeing', 'Geas/Quest', 'Heroism, Greater', 
 		'Suggestion, Mass', 'Symbol of Persuasion', 'Chain Lightning', 'Contingency', 'Forceful Hand', 'Freezing Sphere', 'Mislead', 'Permanent Image', 
-		'Programmed ImageM', 'Shadow Walk', 'Veil', 'Circle of DeathM', 'Create Undead', 'Eyebite', 'Symbol of FearM', 'Undeath to Death', 
+		'Programmed Image', 'Shadow Walk', 'Veil', 'Circle of Death', 'Create Undead', 'Eyebite', 'Symbol of Fear', 'Undeath to Death', 
 		'Bear\'s Endurance, Mass', 'Beast Shape IV', 'Bull\'s Strength, Mass', 'Cat\'s Grace, Mass', 'Control Water', 'Disintegrate', 
 		'Eagle\'s Splendor, Mass', 'Elemental Body III', 'Flesh to Stone', 'Form of the Dragon I', 'Fox\'s Cunning, Mass', 'Mage\'s Lucubration', 
 		'Move Earth', 'Owl\'s Wisdom, Mass', 'Plant Shape II', 'Stone to Flesh', 'Transformation']
 
 	@spells_arcane_level_7 = ['Banishment', 'Sequester', 'Spell Turning', 'Instant Summons', 'Mage\'s Magnificent Mansion', 'Phase Door', 
-		'Plane ShiftF', 'Summon Monster VII', 'Teleport, Greater', 'Teleport Object', 'Arcane Sight, Greater', 'Scrying, Greater', 'Vision', 
+		'Plane Shift', 'Summon Monster VII', 'Teleport, Greater', 'Teleport Object', 'Arcane Sight, Greater', 'Scrying, Greater', 'Vision', 
 		'Hold Person, Mass', 'Insanity', 'Power Word Blind', 'Symbol of Stunning', 'Delayed Blast Fireball', 'Forcecage', 'Grasping Hand', 
 		'Mage\'s Sword', 'Prismatic Spray', 'Invisibility, Mass', 'Project Image', 'Shadow Conjuration, Greater', 'Simulacrum', 'Control Undead', 
 		'Finger of Death', 'Symbol of Weakness', 'Waves of Exhaustion', 'Control Weather', 'Elemental Body IV', 'Ethereal Jaunt', 
 		'Form of the Dragon II', 'Giant Form I', 'Plant Shape III', 'Polymorph, Greater', 'Reverse Gravity', 'Statue', 'Limited Wish']
 
 	@spells_arcane_level_8 = ['Dimensional Lock', 'Mind Blank', 'Prismatic Wall', 'Protection from Spells', 'Incendiary Cloud', 'Maze', 
-		'Planar Binding, Greater', 'Summon Monster VIII', 'Trap the SoulM', 'Discern Location', 'Moment of Prescience', 'Prying Eyes, Greater', 
+		'Planar Binding, Greater', 'Summon Monster VIII', 'Trap the Soul', 'Discern Location', 'Moment of Prescience', 'Prying Eyes, Greater', 
 		'Antipathy', 'Binding', 'Charm Monster, Mass', 'Demand', 'Irresistible Dance', 'Power Word Stun', 'Symbol of Insanity', 'Sympathy', 
 		'Clenched Fist', 'Polar Ray', 'Shout, Greater', 'Sunburst', 'Telekinetic Sphere', 'Scintillating Pattern', 'Screen', 'Shadow Evocation, Greater', 
 		'Clone', 'Create Greater Undead', 'Horrid Wilting', 'Symbol of Death', 'Form of the Dragon III', 'Giant Form II', 'Iron Body', 
@@ -101,7 +101,7 @@ module Grimoire
 		'Neutralize Poison', 'Plant Growth', 'Poison', 'Quench', 'Sleet Storm', 'Snare', 'Speak with Plants', 'Spike Growth','Summon Nature\'s Ally III']
 
 	@spells_divine_level_4 = ['Air Walk', 'Chaos Hammer', 'Control Water', 'Cure Critical Wounds', 'Death Ward', 'Dimensional Anchor', 'Discern Lies', 
-		'Dismissal', 'DivinationM', 'Divine Power', 'Freedom of Movement', 'Giant Vermin', 'Holy Smite', 'Imbue with Spell Ability', 
+		'Dismissal', 'Divination', 'Divine Power', 'Freedom of Movement', 'Giant Vermin', 'Holy Smite', 'Imbue with Spell Ability', 
 		'Inflict Critical Wounds', 'Magic Weapon, Greater', 'Neutralize Poison', 'Order\'s Wrath', 'Planar Ally, Lesser', 'Poison', 'Repel Vermin', 
 		'Restoration', 'Sending', 'Spell Immunity', 'Summon Monster IV', 'Tongues', 'Unholy Blight', 'Antiplant Shell', 'Blight', 'Command Plants', 
 		'Flame Strike', 'Freedom of Movement', 'Giant Vermin', 'Ice Storm', 'Reincarnate', 'Repel Vermin', 'Rusting Grasp', 'Scrying', 'Spike Stones', 
@@ -109,8 +109,8 @@ module Grimoire
 
 	@spells_divine_level_5 = ['Atonement', 'Break Enchantment', 'Breath of Life', 'Command, Greater', 'Commune', 'Cure Light Wounds, Mass', 
 		'Dispel Chaos', 'Dispel Evil', 'Dispel Good', 'Dispel Law', 'Disrupting Weapon', 'Flame Strike', 'Hallow', 'Inflict Light Wounds, Mass', 
-		'Insect Plague', 'Mark of Justice', 'Plane ShiftF', 'Raise Dead', 'Righteous Might', 'Slay Living', 'Spell Resistance', 
-		'Summon Monster V', 'Symbol of Pain', 'Symbol of Sleep', 'True Seeing', 'UnhallowM', 'Wall of Stone', 'Animal Growth', 'Awaken', 
+		'Insect Plague', 'Mark of Justice', 'Plane Shift', 'Raise Dead', 'Righteous Might', 'Slay Living', 'Spell Resistance', 
+		'Summon Monster V', 'Symbol of Pain', 'Symbol of Sleep', 'True Seeing', 'Unhallow', 'Wall of Stone', 'Animal Growth', 'Awaken', 
 		'Baleful Polymorph', 'Call Lightning Storm', 'Commune with Nature', 'Control Winds', 'Death Ward', 'Insect Plague', 'Stoneskin', 
 		'Summon Nature\'s Ally V', 'Transmute Mud to Rock', 'Transmute Rock to Mud', 'Tree Stride', 'Wall of Fire', 'Wall of Thorns']
 

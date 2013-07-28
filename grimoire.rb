@@ -6,13 +6,21 @@
 
 require './armor_and_shields'
 require './weapons'
+require './apg_weapons'
 require './potions'
 require './rings'
+require './apg_rings'
 require './rods'
+require './apg_rods'
 require './scrolls'
+require './apg_scrolls'
+require './um_scrolls'
+require './uc_scrolls'
 require './staves'
+require './apg_staves'
 require './wands'
 require './wondrous_items'
+require './apg_wondrous_items'
 
 module Grimoire
 	# A = Armor and shields

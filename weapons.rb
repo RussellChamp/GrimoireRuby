@@ -325,7 +325,7 @@ module Grimoire
 			when 'medium'
 				case rand(100)+1
 					when 1..6
-						return get_weapon_special_bane
+						return get_weapon_special_bane()
 					when 7..12
 						return @weapons_melee_specials[1]
 					when 13..19
@@ -378,7 +378,7 @@ module Grimoire
 			when 'major'
 				case rand(100)+1
 					when 1..3
-						return get_weapon_special_bane
+						return get_weapon_special_bane()
 					when 4..6
 						return @weapons_melee_specials[2]
 					when 7..9
@@ -487,7 +487,7 @@ module Grimoire
 			when 'medium'
 				case rand(100)+1
 					when 1..8
-						return get_weapon_special_bane
+						return get_weapon_special_bane()
 					when 9..16
 						return @weapons_ranged_specials[1]
 					when 17..28
@@ -526,7 +526,7 @@ module Grimoire
 			when 'major'
 				case rand(100)+1
 					when 1..4
-						return get_weapon_special_bane
+						return get_weapon_special_bane()
 					when 5..8
 						return @weapons_ranged_specials[1]
 					when 9..12
@@ -587,7 +587,7 @@ module Grimoire
 	#the 'type' argument is used to preserve whether a weapon is 'melee' or 'ranged'
 	#the 'final' argument is set to false when we're recursively calling get_weapons()
 	def Grimoire.get_weapons(num_minor = 0, num_medium = 0, num_major = 0, type = nil, final = true)
-		#TODO: make a random roll for weather the weapon is ranged or melee
+		#TODO: resolve issue where you get a "Glowing Glowing Glowing item"
 		#TODO: resolve "stack level too deep" issue when running in irb
 		ret_weapons = []
 		num_minor.times{

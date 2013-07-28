@@ -162,11 +162,11 @@ module Grimoire
 			when 41..50
 				return ['Defeat/slay non-spellcasters', 2]
 			when 51..55
-				return ['Defeat/slay all ' + @weapon_bane.sample , 2] #this probably isn't quite right but we'll keep it for now
+				return ['Defeat/slay all ' + @weapon_bane.choice , 2] #this probably isn't quite right but we'll keep it for now
 			when 56..60
-				return ['Defeat/slay all ' + ['Humanoids (' + get_humanoid_type() + ')', 'Outsiders (' + get_outsider_type() + ')'].sample, 2]
+				return ['Defeat/slay all ' + ['Humanoids (' + get_humanoid_type() + ')', 'Outsiders (' + get_outsider_type() + ')'].choice, 2]
 			when 61..70
-				return ['Defend all ' + ['Humanoids (' + get_humanoid_type() + ')', 'Outsiders (' + get_outsider_type() + ')'].sample, 2]
+				return ['Defend all ' + ['Humanoids (' + get_humanoid_type() + ')', 'Outsiders (' + get_outsider_type() + ')'].choice, 2]
 			when 71..80
 				return ['Defeat/slay the servants of ' + get_deity(), 2]
 			when 81..90
@@ -334,7 +334,9 @@ module Grimoire
 		}
 
 		#add any extra languages to the known languages list
-		@languages.sample(bonus_language_count).each{|language| item_languages += ', ' + language}
+		if bonus_language_count > 0
+			@languages.shuffle[0..(bonus_language_count-1)].each{|language| item_languages += ', ' + language}
+		end
 
 		#determining purpose
 		#there was NO roll chart for determining if an item has a purpose so I made this up

@@ -10,7 +10,7 @@ This project contains a series of function under the 'Grimoire' module.
 
 Grimoire currently only rolls for items based on the Pathfinder Core Rulebook
 I hope to add roll tables for the Pathfinder Advanced Player's Guide soon
-Grimoire has been tested and known to work with Ruby 1.8 and 1.9
+Grimoire requires Ruby >=1.9 and will NOT work with 1.8 due to some function depreciation
 
 While the primary purpose of this project is to be used as a library accessed by other projects, you can manually generate items by following these steps
  1. Open a terminal and `cd` to the directory Grimoire is located
